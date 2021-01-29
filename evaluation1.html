@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluation 1 - JS | MERIDJA Ryad</title>
+  <meta name="description"
+    content="1ère évaluation Javascript réalisée pour le cours de C. Pauline dans le cadre de la formation DEV-WEB à l'IFA Metz." />
+  <meta name="author" content="RyoandFlex">
+  <link rel="stylesheet" href="css/evaluation1.css">
+  <script src="JS/evaluation1.js"></script>
+  <script src="https://kit.fontawesome.com/62c98e86d0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1><i class="fas fa-car"></i> OkkazOtto.com</h1>
+  <form id="formulaire" >
+    <label for="marque">Marque</label>
+    <div id="errorMarque">(* vous devez saisir une marque)</div>
+    <input type="text" id="marque" placeholder="Marque" onblur="rempli()">
+    <label for="modele">Modèle</label>
+    <div id="errorModele">(* vous devez saisir un modèle)</div>
+    <input type="text" id="modele" placeholder="Modèle" onblur="rempli()">
+    <label for="type">Type</label>
+    <div id="errorType">(* vous devez saisir un type de carburant)</div>
+    <select name="type" id="type" onblur="rempli()">
+      <option value="">Veuillez sélectionner un type de carburant</option>
+      <option value="Essence">Essence</option>
+      <option value="Diesel">Diesel</option>
+    </select>
+    <label for="origine">Origine</label>
+    <div id="errorOrigine">(* vous devez saisir un pays d'origine)</div>
+    <select name="origine" id="origine" onblur="rempli()">
+      <option value="">Veuillez sélectionner un pays d'origine</option>
+      <option value="France">France</option>
+      <option value="Allemagne">Allemagne</option>
+      <option value="Italie">Italie</option>
+    </select>
+    <label for="km">Nombre de kilomètres</label>
+    <div id="errorKm">(* vous devez saisir un nombre de kilomètres)</div>
+    <input type="number" id="km" placeholder="Nombre de km" onblur="rempli()">
+    <label for="prixN">Valeur neuve</label>
+    <div id="errorPrixN">(* vous devez saisir une valeur pour ce modèle neuf)</div>
+    <input type="number" id="prixN" placeholder="Valeur neuve" onblur="rempli()">
+    <label for="travaux">Travaux à prévoir</label>
+    <div id="errorTravaux">(* vous devez indiquez si des travaux sont à prévoir)</div>
+    <select name="travaux" id="travaux" onblur="rempli()">
+      <option value="">Veuillez sélectionner une option</option>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select><br>
+    <button type="button" id="btn" onclick="estimation()">Estimer</button>
+    <div id="kmH">Le véhicule a trop de km.</div>
+  </form>
+
+  <div id="message">
+    <div>Marque: <span id="marqueR"></span></div>
+    <div>Modèle: <span id="modeleR"></span></div>
+    <div>Type: <span id="typeR"></span></div>
+    <div>Origine: <span id="origineR"></span></div>
+    <div>Nombre de km: <span id="kmR"></span></div>
+    <div>Travaux à prévoir: <span id="travauxR"></span></div>
+    <div>Prix estimé: <span id="prixE"></span></div>
+  </div>
+</body>
+
+</html>
